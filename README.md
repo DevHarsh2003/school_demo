@@ -89,9 +89,9 @@ This application is built using PHP for backend functionality, MySQL for databas
       
 **1. Clone the repository**
 
-```git clone https://github.com/your-username/school_demo.git
+'''git clone https://github.com/your-username/school_demo.git
 
-cd school_demo```
+cd school_demo'''
 
 **2. Set up the database**
 
