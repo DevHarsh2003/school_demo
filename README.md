@@ -97,49 +97,24 @@ This application is built using PHP for backend functionality, MySQL for databas
 
 **Create a new MySQL database:**
 
-```CREATE DATABASE school_db;
+```CREATE DATABASE school_db;```
 
 Import the SQL file (schema.sql) to create the tables:
 
 
 
-USE school_db;```
+```USE school_db;```
 
 
 **-- Schema for 'students' table**
 
-```CREATE TABLE students (
-
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    
-    name VARCHAR(255),
-    
-    email VARCHAR(255),
-    
-    address TEXT,
-    
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    
-    class_id INT,
-    
-    image VARCHAR(255),
-    
-    FOREIGN KEY (class_id) REFERENCES classes(class_id)
-
-);```
+```CREATE TABLE students (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), email VARCHAR(255), address TEXT, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, class_id INT, image VARCHAR(255), FOREIGN KEY (class_id) REFERENCES classes(class_id) );```
 
 
 
 **-- Schema for 'classes' table**
 
-```CREATE TABLE classes (
-
-    class_id INT AUTO_INCREMENT PRIMARY KEY,
-    
-    name VARCHAR(255),
-    
-    created_at DATETIME
-);```
+```CREATE TABLE classes (class_id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(255), created_at DATETIME );```
 
 **3. Configure the Database Connection**
 
@@ -147,18 +122,18 @@ USE school_db;```
 Open db.php and configure the database connection settings (database host, username, password, etc.).
 
 
-```<?php
+```<?php```
 
-$con = mysqli_connect("localhost", "root", "", "school_db");
+```$con = mysqli_connect("localhost", "root", "", "school_db");```
 
 
-if (!$con) {
+```if (!$con) {```
 
-    die("Connection failed: " . mysqli_connect_error());
+   ``` die("Connection failed: " . mysqli_connect_error());```
 
-}
+```}```
 
-?>```
+```?>```
 
 **4. Start the Web Server**
 
@@ -208,62 +183,63 @@ Create a new pull request.
 
 **Output**
 
-Home page(index.php)
+
+**Home page(index.php)**
 
 ![Screenshot 2024-11-19 122507](https://github.com/user-attachments/assets/ca0a4c17-1acf-4c2d-8d83-a00ad4ecea53)
 
 
-View page(view.php)
+**View page(view.php)**
 
 ![Screenshot 2024-11-19 122531](https://github.com/user-attachments/assets/2684b62e-e8b6-4190-b44f-1370438403b7)
 
-Edit page(edit.php)
+**Edit page(edit.php)**
 
 ![Screenshot 2024-11-19 122541](https://github.com/user-attachments/assets/8a5e1e1f-5afb-4dd8-94f9-3edb2db6fed8)
 
-Delete (Delete.php)
+**Delete (Delete.php)**
 
 ![Screenshot 2024-11-19 122604](https://github.com/user-attachments/assets/ab7692e3-406d-4e03-acf7-f82988e51364)
 
-Create Page (create.php)
+**Create Page (create.php)**
 
 ![Screenshot 2024-11-19 122611](https://github.com/user-attachments/assets/1d85eff2-fcfa-4bfd-8ff8-c7b9b35d36d7)
 
 ![Screenshot 2024-11-19 122615](https://github.com/user-attachments/assets/100c75e3-5069-4439-923a-a9a89962006f)
 
-Classes page(classes.php)
+**Classes page(classes.php)**
 
 ![Screenshot 2024-11-19 122629](https://github.com/user-attachments/assets/f2487ae1-8a2e-4ce0-a5c5-314a82581bf7)
 
-Edit Class(edit_class.php)
+**Edit Class(edit_class.php)**
 
 ![Screenshot 2024-11-19 122638](https://github.com/user-attachments/assets/a1c68ae5-f6ca-4c59-99f3-5a57f4d0277c)
 
-Delete class(delete_class.php)
+**Delete class(delete_class.php)**
 
 ![Screenshot 2024-11-19 122655](https://github.com/user-attachments/assets/8a9f8b54-2142-43d5-8f6d-3e710121d5f2)
 
-Database 
+**Database**
 
 ![Screenshot 2024-11-19 122719](https://github.com/user-attachments/assets/a9b0e528-e483-4311-8dbc-ba7a99f47d5a)
 
-Student Table
+**Student Table**
 
 ![Screenshot 2024-11-19 122753](https://github.com/user-attachments/assets/b9f96bab-5633-46b6-9376-b26c07de830b)
 
 ![Screenshot 2024-11-19 122807](https://github.com/user-attachments/assets/24c39b00-71db-46a4-a2b9-42b9c18ff4dd)
 
-Classes Table
+**Classes Table**
 
 ![Screenshot 2024-11-19 122742](https://github.com/user-attachments/assets/7664f281-ec7f-44a3-a34e-c05a2237ebc5)
 
 ![Screenshot 2024-11-19 122816](https://github.com/user-attachments/assets/01d8506d-1825-44ea-904c-d79bb91f148c)
 
-Uploads Directory
+**Uploads Directory**
 
 ![Screenshot 2024-11-19 122842](https://github.com/user-attachments/assets/fdf986c3-fde9-494d-b29d-48c21c0d107e)
 
-Directory Structure
+**Directory Structure**
 
 ![Screenshot 2024-11-19 122836](https://github.com/user-attachments/assets/692d8fe0-e299-4654-807a-768289b3c817)
 
